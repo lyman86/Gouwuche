@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="false"
+    android:focusable="false" >
+
+    <CheckBox
+        android:id="@+id/cb_select"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="false"
+        android:layout_centerVertical="true" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/cb_select" >
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="260dp"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:text="dadasdsadsadasfadfdfsdfdsfdfsdfsdfsfsfs" />
+        
+        <ImageView
+                    android:id="@+id/id_shopping_cart_iv_delete"
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:layout_toRightOf="@+id/tv_title"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/chacha"
+                    android:layout_margin="2dp"
+                    android:gravity="center" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_below="@+id/tv_title"
+            android:layout_marginTop="5dp" >
+
+            <ImageView
+                android:id="@+id/iv_goods"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:src="@drawable/default2" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:layout_toRightOf="@+id/iv_goods"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/tv_pinpai"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="2dsafdsds" />
+
+                <TextView
+                    android:id="@+id/tv_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="2dsafdsds" />
+
+                <TextView
+                    android:id="@+id/tv_xinghao"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="2dsafdsds" />
+
+                <TextView
+                    android:id="@+id/tv_price"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="2dsafdsds" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_item_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:text="小计：￥100" />
+
+            <TextView
+                android:id="@+id/tv_sub_price"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/btn_add_sub_num"
+                android:gravity="center"
+                android:text="-" />
+
+            <TextView
+                android:id="@+id/tv_pro_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@+id/tv_sub_price"
+                android:gravity="center"
+                android:text="1" />
+
+            <TextView
+                android:id="@+id/tv_add_price"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@+id/tv_pro_num"
+                android:background="@drawable/btn_add_sub_num"
+                android:gravity="center"
+                android:text="+" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>
