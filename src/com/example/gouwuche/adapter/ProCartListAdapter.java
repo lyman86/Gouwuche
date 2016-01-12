@@ -157,23 +157,26 @@ public class ProCartListAdapter extends CommonAdapter<ProCartListBean> {
 		});
 		
 		final CheckBox checkBox = viewHolder.getView(R.id.cb_select);
+		final List<Boolean>isSelects = bean.getIsSelects();
 		checkBox.setOnClickListener(new OnClickListener() {
 
 			@Override
 			public void onClick(View v) {
 				 String allPrice;
-				if (bean.getIsSelects().get(viewHolder.getPosition())) {
-					all -= Float.valueOf(bean.getSubTotals().get(viewHolder.getPosition()));
+				 String subTotle = bean.getSubTotals().get(viewHolder.getPosition());
+				 
+				if (isSelects.get(viewHolder.getPosition())) {
+					all -= Float.valueOf(subTotle);
 					allPrice = decimalFormat.format(all);
 					all = Float.valueOf(allPrice);
-					bean.getIsSelects().set(viewHolder.getPosition(), false);
+					isSelects.set(viewHolder.getPosition(), false);
 					selectCount--;
 					checkBox.setChecked(false);
 				}else{
-					all += Float.valueOf(bean.getSubTotals().get(viewHolder.getPosition()));
+					all += Float.valueOf(subTotle);
 					allPrice = decimalFormat.format(all);
 					all = Float.valueOf(allPrice);
-					bean.getIsSelects().set(viewHolder.getPosition(), true);			
+					isSelects.set(viewHolder.getPosition(), true);			
 					selectCount++;
 					checkBox.setChecked(true);	
 				}
@@ -184,7 +187,7 @@ public class ProCartListAdapter extends CommonAdapter<ProCartListBean> {
 			}
 		});
 
-		if (bean.getIsSelects().get(viewHolder.getPosition())) {
+		if (isSelects.get(viewHolder.getPosition())) {
 			checkBox.setChecked(true);
 
 		} else {
@@ -242,7 +245,7 @@ public class ProCartListAdapter extends CommonAdapter<ProCartListBean> {
 	 * @param pos
 	 */
 	private void isNumbersChanged(int pos) {
-			isNumbersChanged.set(pos, true);
+		isNumbersChanged.set(pos, true);
 	}
 
 	/**

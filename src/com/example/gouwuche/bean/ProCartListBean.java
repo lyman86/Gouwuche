@@ -35,5 +35,24 @@ public class ProCartListBean {
 	public void setIsSelects(List<Boolean> isSelects) {
 		this.isSelects = isSelects;
 	}
+	
+//	private String subTotal;
+//	
+//	private boolean isSelect;
+//
+//	public String getSubTotal() {
+//		return subTotal;
+//	}
+//	public void setSubTotal(String subTotal) {
+//		this.subTotal = subTotal;
+//	}
+//	public boolean isSelect() {
+//		return isSelect;
+//	}
+//	public void setSelect(boolean isSelect) {
+//		this.isSelect = isSelect;
+//	}
+	
+	
 
 }
